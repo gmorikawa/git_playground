@@ -1,4 +1,4 @@
-# GitPlayground
+# Git Playground
 
 ## Overview
 This is a repository for practicing Git and GitHub functionalities.
@@ -21,4 +21,28 @@ $~ git config --global user.name "username"
 $~ git config --global user.email "username@mail.com"
 ```
 
-Note that the _--global_ flag was used in this command. 
+Note that the _--global_ flag was used in this command.
+
+### File Status Lifecycle
+
+```
+untracked        unmodified        modified        staged
+    |                |                 |              |
+    |---------------------add file------------------->|
+    |                |                 |              |
+    |                |----edit file--->|              |
+    |<--remove file--|                 |--stage file->|
+    |                |<------------commit-------------|
+    |                |                 |              |
+```
+
+```bash
+# stage file for commit
+$~ git add 'file'
+
+# list all staged, untracked, unmodified and modified files
+$~ git status
+
+# create a snapshot of the project in repository
+$~ git commit
+```
